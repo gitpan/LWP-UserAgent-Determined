@@ -1,0 +1,6 @@
+Revision history for Perl extension LWP::Determined::UserAgent
+                                        Time-stamp: "2004-04-08 22:49:31 ADT"
+
+	
+2004-04-07  Sean M. Burke  sburke@cpan.org
+	* Release 1.02 -- First public release.
