@@ -1,7 +1,7 @@
 
 package LWP::UserAgent::Determined;
-# Time-stamp: "2002-10-08 01:04:09 MDT"           POD is at the end.
-$VERSION = '1.02';
+# Time-stamp: "2004-04-08 23:10:07 ADT"           POD is at the end.
+$VERSION = '1.03';
 use      LWP::UserAgent ();
 @ISA = ('LWP::UserAgent');
 
@@ -208,6 +208,8 @@ Example use:
   $browser->before_determined_callback( sub {
     print "Trying ", $_[4][0]->uri, " ...\n";
   });
+
+=back
 
 
 =head1 IMPLEMENTATION
