@@ -1,7 +1,7 @@
 
 package LWP::UserAgent::Determined;
 
-$VERSION = '1.04';
+$VERSION = '1.05';
 use      LWP::UserAgent ();
 @ISA = ('LWP::UserAgent');
 
@@ -59,7 +59,7 @@ sub new {
 sub _determined_init {
   my $self = shift;
   $self->timing( '1,3,15' );
-  $self->codes_to_determinate( { map $_=>1,
+  $self->codes_to_determinate( { map { $_=>1 }
    '408', # Request Timeout
    '500', # Internal Server Error
    '502', # Bad Gateway
