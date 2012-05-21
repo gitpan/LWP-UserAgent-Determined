@@ -1,7 +1,7 @@
 
 package LWP::UserAgent::Determined;
 
-$VERSION = '1.05';
+$VERSION = '1.06';
 use      LWP::UserAgent ();
 @ISA = ('LWP::UserAgent');
 
@@ -32,8 +32,6 @@ sub simple_request {
       $self, \@timing_tries, $pause_if_unsuccessful, $determination, \@args, $resp);
 
     my $code = $resp->code;
-    my $message = $resp->message;
-    $message =~ s/\s+$//s;
     unless( $determination->{$code} ) { # normal case: all is well (or 404, etc)
       return $resp;
     }
@@ -215,7 +213,7 @@ L<LWP>, L<LWP::UserAgent>
 
 =head1 COPYRIGHT AND DISCLAIMER
 
-Copyright 2004, Sean M. Burke C<sburke@cpan.org>, all rights
+Copyright 2004, Sean M. Burke, all rights
 reserved.  This program is free software; you can redistribute it
 and/or modify it under the same terms as Perl itself.
 
@@ -226,7 +224,9 @@ merchantability or fitness for a particular purpose.
 
 =head1 AUTHOR
 
-Sean M. Burke, C<sburke@cpan.org>
+Originally created by Sean M. Burke, C<sburke@cpan.org>
+
+Currently maintained by Jesse Vincent C<jesse@fsck.com>
 
 =cut
 
